@@ -8,7 +8,7 @@ import {
   HIDDEN_GOVERNANCE_RULE_IDS,
   HIDDEN_SQL_STYLE_RULE_IDS,
 } from "@/constants/demo-rules";
-import { SITE_HOST } from "@/constants/site";
+import { SITE_HOST, SITE_TAGLINE } from "@/constants/site";
 import { getDoctorFace } from "@/utils/get-doctor-face";
 import { getScoreColorClass } from "@/utils/get-score-color-class";
 import { getScoreLabel } from "@/utils/get-score-label";
@@ -438,7 +438,7 @@ const Terminal = () => {
               <img src="/favicon.svg" alt="dbt Doctor" width={24} height={24} />
               dbt-doctor
             </div>
-            <div className="text-neutral-500">The swiss-army toolkit for dbt linting.</div>
+            <div className="text-neutral-500">{SITE_TAGLINE}</div>
             <Spacer />
             <PlatformLogos />
             <Spacer />

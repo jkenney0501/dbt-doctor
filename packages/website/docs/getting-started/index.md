@@ -1,7 +1,7 @@
 # Getting Started
 
-> **dbt Doctor** is the Swiss-army toolkit for dbt linting.  
-> One command to replace fragmented checks across SQL style, dbt graph quality, metadata governance, and CI policy.
+> **Static analysis and health checks for dbt projects.**  
+> Find missing docs, missing tests, schema drift risks, stale models, DAG maintainability issues, and CI quality gate failures.
 
 | No Python         | No warehouse credentials | Works with dbt Core + dbt Fusion |
 | ----------------- | ------------------------ | -------------------------------- |

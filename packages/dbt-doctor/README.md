@@ -12,9 +12,29 @@ See [CHANGELOG.md](./CHANGELOG.md) for release history.
 > [!NOTE]
 > **dbt-doctor** is a clone of [**React Doctor**](https://github.com/millionco/react-doctor) by [**Million**](https://million.dev). React Doctor is published under the [**MIT License**](https://github.com/millionco/react-doctor/blob/main/LICENSE); this project clones and adapts its ideas (CLI, scoring, agent tooling) for **dbt** and remains **MIT** as well — see the monorepo [**LICENSE**](https://github.com/joachimhodana/dbt-doctor/blob/main/LICENSE). Thank you to the React Doctor maintainers for the original work.
 
-**dbt Doctor** scans **dbt** projects: model SQL, YAML, and Jinja. It runs **custom dbt rules** plus optional **[SQLFluff](https://docs.sqlfluff.com/)** (when installed) and prints a **0–100 health score** with actionable diagnostics.
+**Static analysis and health checks for dbt projects.**
+
+Find missing docs, missing tests, schema drift risks, stale models, DAG maintainability issues, and CI quality gate failures.
 
 ### [Site & demo →](https://dbt-doctor.joachimhodana.com)
+
+## dbt-doctor
+
+Static analysis and health checks for dbt projects.
+
+`dbt-doctor` scans your dbt project and finds maintainability issues before they become production debt:
+
+- missing model documentation
+- missing dbt tests
+- weak docs/test coverage
+- schema drift risks
+- stale models
+- source freshness gaps
+- naming convention issues
+- oversized DAG areas
+- governance and ownership gaps
+
+Use it locally, in pre-commit, or as a CI quality gate for analytics engineering teams.
 
 ## Requirements
 

@@ -1,6 +1,12 @@
-# dbt Doctor
+# dbt-doctor
 
-Diagnose dbt project health. Scans SQL models, schema YAML, and project config for naming, documentation, testing, and architecture issues, then outputs a 0–100 score with actionable diagnostics.
+Static analysis and health checks for dbt projects.
+
+Find missing docs, missing tests, schema drift risks, stale models, DAG maintainability issues, and CI quality gate failures.
+
+`dbt-doctor` scans your dbt project and finds maintainability issues before they become production debt: missing model documentation, missing dbt tests, weak docs/test coverage, schema drift risks, stale models, source freshness gaps, naming convention issues, oversized DAG areas, and governance and ownership gaps.
+
+Use it locally, in pre-commit, or as a CI quality gate for analytics engineering teams.
 
 Optional SQL linting via sqlfluff (`pip install sqlfluff sqlfluff-templater-dbt`).
 

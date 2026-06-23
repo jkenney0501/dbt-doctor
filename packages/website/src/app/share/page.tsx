@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SHARE_BASE_URL, SITE_HOST } from "@/constants/site";
+import { SHARE_BASE_URL, SITE_DESCRIPTION, SITE_HOST } from "@/constants/site";
 import { clampScore } from "@/utils/clamp-score";
 import { getDoctorFace } from "@/utils/get-doctor-face";
 import { getScoreColorClass } from "@/utils/get-score-color-class";
@@ -61,8 +61,8 @@ export const generateMetadata = async ({
     descriptionParts.push(`${warningCount} warning${warningCount === 1 ? "" : "s"}`);
   const description =
     descriptionParts.length > 0
-      ? `${descriptionParts.join(", ")} found. Run dbt-doctor on your dbt project to find SQL and modeling issues.`
-      : "Run dbt-doctor on your dbt project to find SQL and modeling issues.";
+      ? `${descriptionParts.join(", ")} found. ${SITE_DESCRIPTION}`
+      : SITE_DESCRIPTION;
 
   const ogSearchParams = new URLSearchParams();
   if (resolvedParams.p) ogSearchParams.set("p", resolvedParams.p);

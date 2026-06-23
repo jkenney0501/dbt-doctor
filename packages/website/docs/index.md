@@ -1,6 +1,8 @@
 # Documentation
 
-Welcome to the `dbt Doctor` docs.
+**Static analysis and health checks for dbt projects.**
+
+Welcome to the `dbt-doctor` docs.
 
 - Use the sidebar to browse pages.
 - Folder `index.md` files become parent pages.

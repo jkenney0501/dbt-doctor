@@ -1,12 +1,14 @@
 ---
 name: dbt-doctor
-description: Use when finishing dbt model work, before committing SQL/YAML, or when improving analytics code quality. Checks for score regression on dbt projects.
+description: Static analysis and health checks for dbt projects. Use before committing SQL/YAML or when enforcing CI quality gates.
 version: "1.0.0"
 ---
 
-# dbt Doctor
+# dbt-doctor
 
-Scans dbt projects for SQL quality, documentation, naming, sources, and architecture issues. Outputs a 0–100 health score.
+Static analysis and health checks for dbt projects.
+
+Find missing docs, missing tests, schema drift risks, stale models, DAG maintainability issues, and CI quality gate failures.
 
 ## After making dbt changes
 

@@ -1,16 +1,21 @@
 {
   "name": "dbt-doctor",
   "version": "0.3.2",
-  "description": "Diagnose and fix dbt projects for SQL quality, documentation, naming, and architecture issues",
+  "description": "Static analysis and health checks for dbt projects. Find missing docs, missing tests, schema drift risks, stale models, DAG maintainability issues, and CI quality gate failures.",
   "keywords": [
-    "analytics",
-    "data",
+    "analytics-engineering",
+    "ci",
+    "cli",
+    "data-engineering",
+    "data-governance",
+    "data-quality",
     "dbt",
-    "diagnostics",
+    "dbt-core",
     "linter",
+    "pre-commit",
+    "python",
     "sql",
-    "sqlfluff",
-    "warehouse"
+    "static-analysis"
   ],
   "homepage": "https://github.com/joachimhodana/dbt-doctor#readme",
   "bugs": {

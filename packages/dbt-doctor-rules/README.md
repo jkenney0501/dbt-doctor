@@ -1,6 +1,6 @@
 # dbt-doctor-rules
 
-Custom lint rules for [dbt-doctor](https://github.com/joachimhodana/dbt-doctor): dbt project structure, naming, documentation, sources, and SQL architecture.
+Custom lint rules for [dbt-doctor](https://github.com/joachimhodana/dbt-doctor). Static analysis and health checks for dbt project structure, naming, documentation, sources, and SQL architecture.
 
 Used by the CLI (`runCustomRules`) with native SQL parser rules by default and optional [sqlfluff](https://docs.sqlfluff.com/) via `--use-sqlfluff`.
 
