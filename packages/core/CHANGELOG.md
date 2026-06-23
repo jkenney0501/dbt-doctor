@@ -1,5 +1,14 @@
 # @dbt-doctor/core
 
+## 0.2.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - dbt-doctor-rules@0.3.3
+  - @dbt-doctor/types@0.3.3
+  - @dbt-doctor/project-info@0.3.3
+
 ## 0.2.2
 
 ### Patch Changes

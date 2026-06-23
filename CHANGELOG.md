@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.3] - 2026-06-23
+
+### Changed
+
+- Product positioning: **static analysis and health checks for dbt projects** across README, docs site, npm metadata, CLI help, GitHub Action description, and agent skill copy.
+
 ## [0.3.2] - 2026-05-31
 
 ### Fixed

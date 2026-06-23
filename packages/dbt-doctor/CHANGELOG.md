@@ -1,5 +1,14 @@
 # dbt-doctor
 
+## 0.3.3
+
+### Patch Changes
+
+- [`13c7231`](https://github.com/joachimhodana/dbt-doctor/commit/13c72313633db920a2f50c26135aa56659cdadeb) Thanks [@joachimhodana](https://github.com/joachimhodana)! - Update product positioning to static analysis and health checks for dbt projects. Refresh npm description, CLI help text, README, site metadata, GitHub Action copy, and agent skill wording.
+
+- Updated dependencies []:
+  - dbt-doctor-rules@0.3.3
+
 ## 0.3.2
 
 ### Patch Changes

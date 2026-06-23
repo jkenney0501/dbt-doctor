@@ -1,5 +1,12 @@
 # @dbt-doctor/project-info
 
+## 0.3.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @dbt-doctor/types@0.3.3
+
 ## 0.3.2
 
 ### Patch Changes

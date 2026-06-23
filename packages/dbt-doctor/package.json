@@ -1,6 +1,6 @@
 {
   "name": "dbt-doctor",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Static analysis and health checks for dbt projects. Find missing docs, missing tests, schema drift risks, stale models, DAG maintainability issues, and CI quality gate failures.",
   "keywords": [
     "analytics-engineering",
