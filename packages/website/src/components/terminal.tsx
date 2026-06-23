@@ -229,9 +229,7 @@ const ScoreHeader = ({ score }: { score: number }) => {
 };
 
 const CollapsedRulesSummary = () => (
-  <div className="mb-1 text-neutral-500">
-    {`  … +${COLLAPSED_RULE_COUNT} more rules`}
-  </div>
+  <div className="mb-1 text-neutral-500">{`  … +${COLLAPSED_RULE_COUNT} more rules`}</div>
 );
 
 const DiagnosticItem = ({ diagnostic }: { diagnostic: RuleDiagnostic }) => {
