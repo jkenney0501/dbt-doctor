@@ -1,5 +1,14 @@
 # dbt-doctor
 
+## 0.3.4
+
+### Patch Changes
+
+- [`215d7a0`](https://github.com/northgraindata/dbt-doctor/commit/215d7a094a87486c0734a2f0059e35f2f294a9cd) Thanks [@joachimhodana](https://github.com/joachimhodana)! - Rebrand repository and site URLs to northgraindata. Update README banners, GitHub Action references, CLI CTA, and package metadata.
+
+- Updated dependencies []:
+  - dbt-doctor-rules@0.3.4
+
 ## 0.3.3
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@dbt-doctor/manifest",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Manifest graph loader for dbt-doctor",
   "bugs": {
     "url": "https://github.com/northgraindata/dbt-doctor/issues"

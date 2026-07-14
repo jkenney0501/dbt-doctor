@@ -1,5 +1,14 @@
 # dbt-doctor-rules
 
+## 0.3.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @dbt-doctor/types@0.3.4
+  - @dbt-doctor/project-info@0.3.4
+  - @dbt-doctor/manifest@0.3.4
+
 ## 0.3.3
 
 ### Patch Changes
