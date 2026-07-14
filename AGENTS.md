@@ -6,7 +6,7 @@ Clone of [react-doctor](https://github.com/millionco/react-doctor) adapted for d
 
 - pnpm monorepo: `packages/dbt-doctor` (CLI), `@dbt-doctor/core`, `@dbt-doctor/project-info`, `@dbt-doctor/types`, `dbt-doctor-rules`, `packages/website`
 - Lint: custom TypeScript rules + optional **sqlfluff** subprocess
-- Scoring: local formula in `@dbt-doctor/core`; optional API at `dbt-doctor.joachimhodana.com`
+- Scoring: local formula in `@dbt-doctor/core`; optional API at `dbt-doctor.northgraindata.com`
 
 ## Commands
 

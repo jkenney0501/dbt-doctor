@@ -1,4 +1,4 @@
-export const GITHUB_REPO = "joachimhodana/dbt-doctor";
+export const GITHUB_REPO = "northgraindata/dbt-doctor";
 
 export const GITHUB_URL = `https://github.com/${GITHUB_REPO}`;
 

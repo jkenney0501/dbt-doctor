@@ -34,9 +34,9 @@ export const SCORE_OK_THRESHOLD = 50;
 
 export const SCORE_BAR_WIDTH_CHARS = 50;
 
-export const SITE_ORIGIN = "https://dbt-doctor.joachimhodana.com";
+export const SITE_ORIGIN = "https://dbt-doctor.northgraindata.com";
 
-export const SITE_HOST = "dbt-doctor.joachimhodana.com";
+export const SITE_HOST = "dbt-doctor.northgraindata.com";
 
 export const SCORE_API_URL = `${SITE_ORIGIN}/api/score`;
 
@@ -57,7 +57,7 @@ export const DEFAULT_BRANCH_CANDIDATES = ["main", "master"];
 // compatibility fallback. Also used by tests as the source of truth.
 export const GIT_SHOW_MAX_BUFFER_BYTES = 10 * 1024 * 1024;
 
-export const CANONICAL_GITHUB_URL = "https://github.com/joachimhodana/dbt-doctor";
+export const CANONICAL_GITHUB_URL = "https://github.com/northgraindata/dbt-doctor";
 
 export const SKILL_NAME = "dbt-doctor";
 

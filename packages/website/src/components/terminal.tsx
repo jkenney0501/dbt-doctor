@@ -520,7 +520,7 @@ const Terminal = () => {
               <strong className="text-neutral-500">dbt</strong> and remains{" "}
               <strong className="text-neutral-500">MIT</strong> as well — see the monorepo{" "}
               <a
-                href="https://github.com/joachimhodana/dbt-doctor/blob/main/LICENSE"
+                href="https://github.com/northgraindata/dbt-doctor/blob/main/LICENSE"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-neutral-500 underline decoration-neutral-700 underline-offset-2 transition-colors hover:text-neutral-400"

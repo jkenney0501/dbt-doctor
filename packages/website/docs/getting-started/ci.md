@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
 
       - name: dbt Doctor
-        uses: joachimhodana/dbt-doctor@0.2.0
+        uses: northgraindata/dbt-doctor@0.2.0
         with:
           diff: main
           fail-on: warning

@@ -1,8 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/dbt-doctor-readme-logo-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/dbt-doctor-readme-logo-light.svg">
-  <img alt="dbt Doctor" src="./assets/dbt-doctor-readme-logo-light.svg" width="180" height="40">
-</picture>
+[![dbt Doctor — static analysis and health checks for dbt projects](./assets/dbt-doctor-readme-banner.png)](https://dbt-doctor.northgraindata.com)
 
 [![version](https://img.shields.io/npm/v/dbt-doctor?style=flat&colorA=000000&colorB=000000)](https://npmjs.com/package/dbt-doctor)
 [![downloads](https://img.shields.io/npm/dt/dbt-doctor.svg?style=flat&colorA=000000&colorB=000000)](https://npmjs.com/package/dbt-doctor)
@@ -10,13 +6,13 @@
 See [CHANGELOG.md](./CHANGELOG.md) for release history.
 
 > [!NOTE]
-> **dbt-doctor** is a clone of [**React Doctor**](https://github.com/millionco/react-doctor) by [**Million**](https://million.dev). React Doctor is published under the [**MIT License**](https://github.com/millionco/react-doctor/blob/main/LICENSE); this project clones and adapts its ideas (CLI, scoring, agent tooling) for **dbt** and remains **MIT** as well — see the monorepo [**LICENSE**](https://github.com/joachimhodana/dbt-doctor/blob/main/LICENSE). Thank you to the React Doctor maintainers for the original work.
+> **dbt-doctor** is a clone of [**React Doctor**](https://github.com/millionco/react-doctor) by [**Million**](https://million.dev). React Doctor is published under the [**MIT License**](https://github.com/millionco/react-doctor/blob/main/LICENSE); this project clones and adapts its ideas (CLI, scoring, agent tooling) for **dbt** and remains **MIT** as well - see the monorepo [**LICENSE**](https://github.com/northgraindata/dbt-doctor/blob/main/LICENSE). Thank you to the React Doctor maintainers for the original work.
 
 **Static analysis and health checks for dbt projects.**
 
 Find missing docs, missing tests, schema drift risks, stale models, DAG maintainability issues, and CI quality gate failures.
 
-### [Site & demo →](https://dbt-doctor.joachimhodana.com)
+### [Site & demo →](https://dbt-doctor.northgraindata.com)
 
 ## dbt-doctor
 
@@ -85,13 +81,13 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0 # required when using diff
-      - uses: joachimhodana/dbt-doctor@main
+      - uses: northgraindata/dbt-doctor@main
         with:
           diff: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-**Notable inputs:** `directory`, `verbose`, `project`, `diff`, `github-token`, `fail-on` (`error` / `warning` / `none`), `offline`, `annotations`, `setup-sqlfluff` (default installs SQLFluff + dbt templater), `node-version`. See [`action.yml`](https://github.com/joachimhodana/dbt-doctor/blob/main/action.yml) for full descriptions.
+**Notable inputs:** `directory`, `verbose`, `project`, `diff`, `github-token`, `fail-on` (`error` / `warning` / `none`), `offline`, `annotations`, `setup-sqlfluff` (default installs SQLFluff + dbt templater), `node-version`. See [`action.yml`](https://github.com/northgraindata/dbt-doctor/blob/main/action.yml) for full descriptions.
 
 With `github-token` on `pull_request`, findings are posted as a **sticky PR comment**. The action exposes a **`score`** output (0–100) for follow-up steps (e.g. score floor checks).
 
@@ -115,7 +111,7 @@ Annotations (`--annotations`) and PR comments (`github-token`) are **display-onl
 
 Add a **`.dbt-doctor`** props file at the project root (`KEY=value`, `#` comments — like `.env`). CLI flags override config.
 
-**Presets** (`default` | `strict` | `enterprise`) control which rule tags run and default CI strictness. Omit `preset` to run all 122 rules. See [presets](https://dbt-doctor.joachimhodana.com/docs/getting-started/presets).
+**Presets** (`default` | `strict` | `enterprise`) control which rule tags run and default CI strictness. Omit `preset` to run all 122 rules. See [presets](https://dbt-doctor.northgraindata.com/docs/getting-started/presets).
 
 **Example `.dbt-doctor`:**
 
@@ -146,7 +142,7 @@ offline=false
 - **`surfaces`** — tune `cli`, `prComment`, `score`, and `ciFailure` independently (include/exclude by tag, category, or `plugin/rule` id).
 - **`rules`** / **`categories`** — severity overrides (`error` / `warn` / `off`) for rule ids and rule categories.
 
-Rule catalog: **[Rules reference](https://dbt-doctor.joachimhodana.com/docs/rules)** (generated from `packages/dbt-doctor-rules/src/rules/`).
+Rule catalog: **[Rules reference](https://dbt-doctor.northgraindata.com/docs/rules)** (generated from `packages/dbt-doctor-rules/src/rules/`).
 
 ### Inline suppressions (SQL / YAML)
 
@@ -220,22 +216,28 @@ console.log(result.diagnostics);
 console.log(result.project); // ProjectInfo: adapter, model paths, etc.
 ```
 
-`diagnose` accepts options such as **`lint`**, **`offline`**, **`includePaths`**, **`respectInlineDisables`**. See [`packages/dbt-doctor/src/api.ts`](https://github.com/joachimhodana/dbt-doctor/blob/main/packages/dbt-doctor/src/api.ts).
+`diagnose` accepts options such as **`lint`**, **`offline`**, **`includePaths`**, **`respectInlineDisables`**. See [`packages/dbt-doctor/src/api.ts`](https://github.com/northgraindata/dbt-doctor/blob/main/packages/dbt-doctor/src/api.ts).
 
 ## Monorepo & contributing
 
-This package is part of the **[dbt-doctor](https://github.com/joachimhodana/dbt-doctor)** monorepo. To hack on the CLI locally:
+This package is part of the **[dbt-doctor](https://github.com/northgraindata/dbt-doctor)** monorepo. To hack on the CLI locally:
 
 ```bash
-git clone https://github.com/joachimhodana/dbt-doctor.git
+git clone https://github.com/northgraindata/dbt-doctor.git
 cd dbt-doctor
 pnpm install
 pnpm build
 node packages/dbt-doctor/bin/dbt-doctor.js /path/to/your/dbt-project
 ```
 
-**Issues:** [github.com/joachimhodana/dbt-doctor/issues](https://github.com/joachimhodana/dbt-doctor/issues)
+**Issues:** [github.com/northgraindata/dbt-doctor/issues](https://github.com/northgraindata/dbt-doctor/issues)
+
+## Who made dbt Doctor?
+
+**dbt Doctor** is built and maintained by [**Northgrain Data**](https://northgraindata.com), a data engineering agency for modern dbt and Snowflake teams. We design, build, test, and improve reliable data systems — and publish open-source tools based on what works in production.
+
+[![Northgrain Data — the data engineering partner for modern dbt and Snowflake teams](./assets/northgrain-data-readme-banner.png)](https://northgraindata.com)
 
 ### License
 
-This package is **MIT** — [LICENSE](https://github.com/joachimhodana/dbt-doctor/blob/main/LICENSE). Upstream credit: **dbt-doctor** is a clone of **Million** / **React Doctor** (see the note at the top of this README).
+This package is **MIT** - [LICENSE](https://github.com/northgraindata/dbt-doctor/blob/main/LICENSE). Upstream credit: **dbt-doctor** is a clone of **Million** / **React Doctor** (see the note at the top of this README).

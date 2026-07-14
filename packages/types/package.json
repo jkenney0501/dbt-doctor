@@ -3,13 +3,13 @@
   "version": "0.3.3",
   "description": "Shared TypeScript types for dbt-doctor packages",
   "bugs": {
-    "url": "https://github.com/joachimhodana/dbt-doctor/issues"
+    "url": "https://github.com/northgraindata/dbt-doctor/issues"
   },
   "license": "MIT",
   "author": "Joachim Hodana",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joachimhodana/dbt-doctor.git",
+    "url": "https://github.com/northgraindata/dbt-doctor.git",
     "directory": "packages/types"
   },
   "files": [

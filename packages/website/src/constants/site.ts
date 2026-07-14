@@ -1,7 +1,7 @@
 /** Canonical public site — keep in sync with @dbt-doctor/core constants. */
-export const SITE_ORIGIN = "https://dbt-doctor.joachimhodana.com";
+export const SITE_ORIGIN = "https://dbt-doctor.northgraindata.com";
 
-export const SITE_HOST = "dbt-doctor.joachimhodana.com";
+export const SITE_HOST = "dbt-doctor.northgraindata.com";
 
 export const SITE_TAGLINE = "Static analysis and health checks for dbt projects.";
 

@@ -72,7 +72,7 @@ export const printNoScoreHeader = (noScoreMessage: string): void => {
 
 export const printGithubActionCta = (): void => {
   logger.log(
-    `  ${highlighter.bold("→ Run in CI:")} ${highlighter.info("joachimhodana/dbt-doctor")} GitHub Action`,
+    `  ${highlighter.bold("→ Run in CI:")} ${highlighter.info("northgraindata/dbt-doctor")} GitHub Action`,
   );
   logger.log(`  ${highlighter.dim(`See ${CANONICAL_GITHUB_URL} for setup.`)}`);
   logger.break();

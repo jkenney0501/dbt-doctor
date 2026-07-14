@@ -1595,7 +1595,7 @@ rules.intermediate-prefix=warn
 
 **warn** · Naming
 
-Use fct* or dim* prefix for mart models
+Use fct*, dim*, rpt*, or report* prefix for mart models
 
 **Configuration**
 
