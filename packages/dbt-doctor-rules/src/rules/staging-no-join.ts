@@ -4,7 +4,7 @@ import { report } from "../utils/report.js";
 import { offsetToLineColumn, parseSqlWithCst, walkCstWithPath } from "../utils/sql-cst.js";
 
 /**
- * Staging should rename/recast only — joins belong in intermediate/marts.
+ * Staging should rename/recast only - joins belong in intermediate/marts.
  * @see https://docs.getdbt.com/best-practices/how-we-structure/2-staging
  */
 export const stagingNoJoin: Rule = {
@@ -33,7 +33,7 @@ export const stagingNoJoin: Rule = {
         report(
           stagingNoJoin,
           file,
-          "Staging model contains a JOIN — prefer one staging model per source entity",
+          "Staging model contains a JOIN - prefer one staging model per source entity",
           "Move joins to an int_ model, then build marts from refs.",
           position.line,
           position.column,

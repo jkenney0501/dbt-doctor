@@ -28,7 +28,7 @@ export const recommendedDbtPackages: Rule = {
         report(
           recommendedDbtPackages,
           "packages.yml",
-          "No packages.yml found — recommended dbt packages are not declared",
+          "No packages.yml found - recommended dbt packages are not declared",
           "Create packages.yml with dbt-labs/dbt_utils, godatadriven/dbt_date, and metaplane/dbt_expectations.",
         ),
       );

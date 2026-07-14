@@ -68,7 +68,7 @@ export const runExplain = async (
     const colorizedRule = colorizeRuleByDiagnostic(ruleIdentifier, diagnostic.severity);
     const severityLabel = colorizeRuleByDiagnostic(diagnostic.severity, diagnostic.severity);
     logger.log(
-      `${severitySymbol} ${colorizedRule} ${highlighter.dim(`(${severityLabel})`)} — ${diagnostic.message}`,
+      `${severitySymbol} ${colorizedRule} ${highlighter.dim(`(${severityLabel})`)} - ${diagnostic.message}`,
     );
     if (diagnostic.category) logger.dim(`  Category: ${diagnostic.category}`);
     if (diagnostic.help) logger.dim(`  ${diagnostic.help}`);
@@ -77,7 +77,7 @@ export const runExplain = async (
       logger.log(`  Suppression diagnosis: ${diagnostic.suppressionHint}`);
     } else {
       logger.dim(
-        "  No nearby dbt-doctor-disable-next-line comment was detected — add one immediately above this line to suppress.",
+        "  No nearby dbt-doctor-disable-next-line comment was detected - add one immediately above this line to suppress.",
       );
     }
     logger.break();

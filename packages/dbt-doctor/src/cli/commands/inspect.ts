@@ -108,7 +108,7 @@ export const inspectAction = async (directory: string, flags: InspectFlags): Pro
     const skipPrompts = shouldSkipPrompts({ yes: flags.yes, full: flags.full, json: flags.json });
 
     if (!flags.offline && isCiEnvironment() && !isQuiet) {
-      logger.dim("CI detected — scoring locally.");
+      logger.dim("CI detected - scoring locally.");
       logger.break();
     }
 
@@ -201,7 +201,7 @@ export const inspectAction = async (directory: string, flags: InspectFlags): Pro
     const effectiveDiff = resolveEffectiveDiff(flags, userConfig);
     const explicitBaseBranch = typeof effectiveDiff === "string" ? effectiveDiff : undefined;
     const wantsDiffMode = effectiveDiff !== undefined && effectiveDiff !== false;
-    // HACK: also call getDiffInfo when we MIGHT prompt the user — without
+    // HACK: also call getDiffInfo when we MIGHT prompt the user - without
     // it, resolveDiffMode short-circuits at !diffInfo and the
     // "Only scan changed files?" prompt never appears for users on a
     // feature branch who didn't explicitly pass --diff.
@@ -209,7 +209,7 @@ export const inspectAction = async (directory: string, flags: InspectFlags): Pro
     const diffInfo = shouldDetectDiff ? getDiffInfo(resolvedDirectory, explicitBaseBranch) : null;
     const isDiffMode = await resolveDiffMode(diffInfo, effectiveDiff, skipPrompts, isQuiet);
 
-    // HACK: set the report-mode marker BEFORE the scan loop runs — if the
+    // HACK: set the report-mode marker BEFORE the scan loop runs - if the
     // user hits Ctrl-C mid-scan, the SIGINT handler reads it for the JSON
     // cancel report. Setting it after the loop completes means a cancelled
     // diff scan would report mode: "full".
@@ -249,7 +249,7 @@ export const inspectAction = async (directory: string, flags: InspectFlags): Pro
           includePaths = changedSourceFiles;
         } else if (!isQuiet) {
           logger.dim(
-            `Cannot detect diff for ${projectDirectory} (not a git repository?) — scanning all files.`,
+            `Cannot detect diff for ${projectDirectory} (not a git repository?) - scanning all files.`,
           );
           logger.break();
         }

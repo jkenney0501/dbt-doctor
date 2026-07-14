@@ -17,7 +17,7 @@ export const buildSarifReport = (diagnostics: Diagnostic[], toolVersion: string)
         results: diagnostics.map((diagnostic) => ({
           ruleId: `${diagnostic.plugin}/${diagnostic.rule}`,
           level: diagnostic.severity === "error" ? ("error" as const) : ("warning" as const),
-          message: { text: `${diagnostic.message} — ${diagnostic.help}` },
+          message: { text: `${diagnostic.message} - ${diagnostic.help}` },
           locations: [
             {
               physicalLocation: {

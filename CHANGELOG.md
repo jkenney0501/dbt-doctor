@@ -17,11 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- **SQL comment false positives** — rules skip `-- Columns from...` and `E.G.` in dim header comments.
-- **`sql-no-comma-join`** — scope FROM scanning to the clause (stop at `JOIN`, `)`, subqueries); ignore CTE `),` separators.
-- **`sql-reference-object-in-from`** — collect aliases from multi-line joins, subquery `) alias on`, and `from base sales`; ignore comment lines.
-- **`sql-expression-alias-required`** — skip `{% if is_incremental() %}` bodies, `a.*`, `{{ model.name }}.*`, and Snowflake `* EXCLUDE (...)`.
-- **`sql-set-operator-column-count-match`** — ignore `SELECT`/`FROM` words in line comments.
+- **SQL comment false positives** - rules skip `-- Columns from...` and `E.G.` in dim header comments.
+- **`sql-no-comma-join`** - scope FROM scanning to the clause (stop at `JOIN`, `)`, subqueries); ignore CTE `),` separators.
+- **`sql-reference-object-in-from`** - collect aliases from multi-line joins, subquery `) alias on`, and `from base sales`; ignore comment lines.
+- **`sql-expression-alias-required`** - skip `{% if is_incremental() %}` bodies, `a.*`, `{{ model.name }}.*`, and Snowflake `* EXCLUDE (...)`.
+- **`sql-set-operator-column-count-match`** - ignore `SELECT`/`FROM` words in line comments.
 
 ### Added
 
@@ -36,15 +36,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- **Jinja false positives** — SQL style rules no longer flag `source("a", "b")` commas, `{{ model.name }}`, `trim_all_columns()`, or quoted strings inside `{{ config() }}`.
-- **`sql-join-condition-required`** — `ON` on a new line is recognized.
-- **`sql-set-operator-column-count-match`** — skip `UNION BY NAME` (Snowflake).
-- **`sql-clause-newline-consistency`** — ignore `-- where` in line comments.
-- **`materialization-hint`** — reads `materialized` from model YAML, not only inline `{{ config() }}`.
-- **`sql-reference-target-exists`** — accepts `ref()` to **seeds**.
-- **`root-models`** — treats seed dependencies as upstream; ignores models from installed packages (e.g. mesh stubs).
-- **Default preset** — projects without `.dbt-doctor` now use `preset=default` instead of the full ~190-rule catalog.
-- **Snowflake parsing** — map Snowflake/Databricks to a PostgreSQL-compatible CST dialect for better `no-select-star` coverage.
+- **Jinja false positives** - SQL style rules no longer flag `source("a", "b")` commas, `{{ model.name }}`, `trim_all_columns()`, or quoted strings inside `{{ config() }}`.
+- **`sql-join-condition-required`** - `ON` on a new line is recognized.
+- **`sql-set-operator-column-count-match`** - skip `UNION BY NAME` (Snowflake).
+- **`sql-clause-newline-consistency`** - ignore `-- where` in line comments.
+- **`materialization-hint`** - reads `materialized` from model YAML, not only inline `{{ config() }}`.
+- **`sql-reference-target-exists`** - accepts `ref()` to **seeds**.
+- **`root-models`** - treats seed dependencies as upstream; ignores models from installed packages (e.g. mesh stubs).
+- **Default preset** - projects without `.dbt-doctor` now use `preset=default` instead of the full ~190-rule catalog.
+- **Snowflake parsing** - map Snowflake/Databricks to a PostgreSQL-compatible CST dialect for better `no-select-star` coverage.
 
 ## [0.3.0] - 2026-05-25
 
@@ -64,7 +64,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- `config.baseline` and `--write-baseline` — use `ignore.rules` / `ignore.files` instead.
+- `config.baseline` and `--write-baseline` - use `ignore.rules` / `ignore.files` instead.
 
 ## [0.2.0] - 2026-04-XX
 

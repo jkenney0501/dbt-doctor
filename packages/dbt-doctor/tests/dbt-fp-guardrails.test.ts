@@ -19,7 +19,7 @@ describe("dbt false-positive guardrails", () => {
     project = undefined;
   });
 
-  it.each(DBT_FP_GUARDRAILS)("$id — $label", (guardrail) => {
+  it.each(DBT_FP_GUARDRAILS)("$id - $label", (guardrail) => {
     project = createTempDbtProject({
       modelSql: guardrail.modelSql,
       modelPath: guardrail.modelPath,

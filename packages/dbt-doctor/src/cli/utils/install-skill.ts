@@ -70,7 +70,7 @@ export const runInstallSkill = async (options: InstallSkillOptions = {}): Promis
   if (selectedAgents.length === 0) return;
 
   if (options.dryRun) {
-    logger.log(`Dry run — would install ${SKILL_NAME} skill for:`);
+    logger.log(`Dry run - would install ${SKILL_NAME} skill for:`);
     for (const agent of selectedAgents) {
       logger.dim(`  - ${getSkillAgentConfig(agent).displayName}`);
     }

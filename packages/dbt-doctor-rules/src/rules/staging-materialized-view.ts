@@ -6,7 +6,7 @@ const TABLE_MATERIALIZATION =
   /\{\{-?\s*config\s*\([^)]*materialized\s*=\s*['"](table|incremental)['"]/i;
 
 /**
- * Staging is typically views — tables add build time without business value.
+ * Staging is typically views - tables add build time without business value.
  * @see https://docs.getdbt.com/best-practices/how-we-structure/2-staging
  */
 export const stagingMaterializedView: Rule = {

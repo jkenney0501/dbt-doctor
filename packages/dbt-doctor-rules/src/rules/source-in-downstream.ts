@@ -23,7 +23,7 @@ export const sourceInDownstream: Rule = {
         report(
           sourceInDownstream,
           file,
-          "Marts/intermediate model uses {{ source() }} — add or use a staging model",
+          "Marts/intermediate model uses {{ source() }} - add or use a staging model",
           "Create stg_<source>__<entity> that selects from source(), then ref() it downstream.",
         ),
       );

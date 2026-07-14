@@ -29,7 +29,7 @@ export const isMartModelPath = (filePath: string): boolean => {
   );
 };
 
-/** Marts or intermediate — should not call {{ source() }} directly. */
+/** Marts or intermediate - should not call {{ source() }} directly. */
 export const isDownstreamModelPath = (filePath: string): boolean =>
   isIntermediateModelPath(filePath) || isMartModelPath(filePath);
 

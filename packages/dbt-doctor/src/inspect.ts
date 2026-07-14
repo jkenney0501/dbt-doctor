@@ -201,11 +201,11 @@ const runInspect = async (
   const hasSkippedChecks = skippedChecks.length > 0;
 
   // HACK: --offline opts out of the score API entirely; without a
-  // local fallback (intentional — scoring lives on the server) we
+  // local fallback (intentional - scoring lives on the server) we
   // simply skip the score in offline mode and the renderer shows the
   // "score unavailable" branch. The message distinguishes the two
-  // null sources — `--offline` (user-requested) vs API failure (the
-  // network round-trip didn't return a usable score) — so the
+  // null sources - `--offline` (user-requested) vs API failure (the
+  // network round-trip didn't return a usable score) - so the
   // renderer doesn't claim offline mode when the user is online but
   // the API was unreachable.
   //
@@ -228,7 +228,7 @@ const runInspect = async (
     skippedCheckReasons.lint = lintFailureReason;
   } else if (lintPartialFailures.length > 0) {
     // Lint as a whole succeeded (we got diagnostics from at least one
-    // batch) but some batches timed out — surface the partial-failure
+    // batch) but some batches timed out - surface the partial-failure
     // notes so JSON consumers see why a few files weren't checked.
     skippedCheckReasons["lint:partial"] = lintPartialFailures.join("; ");
   }
@@ -283,11 +283,11 @@ const runInspect = async (
     if (hasSkippedChecks) {
       const skippedLabel = skippedChecks.join(" and ");
       logger.warn(
-        `No issues detected, but ${skippedLabel} checks failed — results are incomplete.`,
+        `No issues detected, but ${skippedLabel} checks failed - results are incomplete.`,
       );
     } else if (demotedDiagnosticCount > 0) {
       logger.success(
-        `No issues found! (${demotedDiagnosticCount} demoted from the ${options.outputSurface} surface — see config.surfaces.)`,
+        `No issues found! (${demotedDiagnosticCount} demoted from the ${options.outputSurface} surface - see config.surfaces.)`,
       );
     } else {
       logger.success("No issues found!");
@@ -295,7 +295,7 @@ const runInspect = async (
     logger.break();
     if (hasSkippedChecks) {
       printBrandingOnlyHeader();
-      logger.log(highlighter.gray("  Score not shown — some checks could not complete."));
+      logger.log(highlighter.gray("  Score not shown - some checks could not complete."));
     } else if (scoreResult) {
       printScoreHeader(scoreResult);
     } else {
@@ -310,7 +310,7 @@ const runInspect = async (
   if (demotedDiagnosticCount > 0) {
     logger.log(
       highlighter.gray(
-        `  ${demotedDiagnosticCount} demoted from the ${options.outputSurface} surface (e.g. design cleanup) — run \`npx dbt-doctor@latest .\` locally for the full list.`,
+        `  ${demotedDiagnosticCount} demoted from the ${options.outputSurface} surface (e.g. design cleanup) - run \`npx dbt-doctor@latest .\` locally for the full list.`,
       ),
     );
     logger.break();
@@ -339,7 +339,7 @@ const runInspect = async (
   if (hasSkippedChecks) {
     const skippedLabel = skippedChecks.join(" and ");
     logger.break();
-    logger.warn(`  Note: ${skippedLabel} checks failed — score may be incomplete.`);
+    logger.warn(`  Note: ${skippedLabel} checks failed - score may be incomplete.`);
   }
 
   return buildResult();

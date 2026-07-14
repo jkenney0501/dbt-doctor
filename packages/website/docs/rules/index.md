@@ -59,7 +59,7 @@ See also [Tool parity](/docs/tool-parity) for how these rules map to SQLFluff, d
 
 **error** · Architecture
 
-Do not mix {{ source() }} and {{ ref() }} in one model — stage sources first
+Do not mix {{ source() }} and {{ ref() }} in one model - stage sources first
 
 **Configuration**
 

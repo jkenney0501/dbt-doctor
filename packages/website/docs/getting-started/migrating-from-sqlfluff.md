@@ -22,8 +22,8 @@ skip_sqlfluff=true
 
 SQLFluff often expects a terminator semicolon (`LT12`). dbt models usually should **not** end with `;`.
 
-- SQLFluff: `LT12` — add semicolon
-- dbt-doctor: [`script-semicolon`](/docs/rules#script-semicolon) — remove trailing semicolon
+- SQLFluff: `LT12` - add semicolon
+- dbt-doctor: [`script-semicolon`](/docs/rules#script-semicolon) - remove trailing semicolon
 
 ### SQL style is opt-in via preset
 

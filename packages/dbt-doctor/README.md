@@ -1,4 +1,4 @@
-[![dbt Doctor — static analysis and health checks for dbt projects](./assets/dbt-doctor-readme-banner.png)](https://dbt-doctor.northgraindata.com)
+[![dbt Doctor - static analysis and health checks for dbt projects](./assets/dbt-doctor-readme-banner.png)](https://dbt-doctor.northgraindata.com)
 
 [![version](https://img.shields.io/npm/v/dbt-doctor?style=flat&colorA=000000&colorB=000000)](https://npmjs.com/package/dbt-doctor)
 [![downloads](https://img.shields.io/npm/dt/dbt-doctor.svg?style=flat&colorA=000000&colorB=000000)](https://npmjs.com/package/dbt-doctor)
@@ -36,7 +36,7 @@ Use it locally, in pre-commit, or as a CI quality gate for analytics engineering
 
 - **Node.js 22+**
 - **dbt layout:** a `dbt_project.yml` at the project root (or use `rootDir` in config for monorepos).
-- **SQLFluff (recommended):** `pip install sqlfluff sqlfluff-templater-dbt` — omit if you set `skipSqlfluff: true` or use `customRulesOnly` (custom rules only).
+- **SQLFluff (recommended):** `pip install sqlfluff sqlfluff-templater-dbt` - omit if you set `skipSqlfluff: true` or use `customRulesOnly` (custom rules only).
 
 ## Quick start
 
@@ -101,15 +101,15 @@ Remember to install SQLFluff in that job unless you rely on `skipSqlfluff` / `cu
 
 ## PR blocking and exit codes
 
-- **`--fail-on <level>`** — `error` (default), `warning`, or `none`. Applies to diagnostics that pass the **`ciFailure`** surface (see configuration).
-- **`--diff <base>`** — only files changed vs `main` / `master` or your branch name; good for **regression-only** gates.
-- **`--staged`** — only staged files (pre-commit). Do not combine with `--diff`.
+- **`--fail-on <level>`** - `error` (default), `warning`, or `none`. Applies to diagnostics that pass the **`ciFailure`** surface (see configuration).
+- **`--diff <base>`** - only files changed vs `main` / `master` or your branch name; good for **regression-only** gates.
+- **`--staged`** - only staged files (pre-commit). Do not combine with `--diff`.
 
 Annotations (`--annotations`) and PR comments (`github-token`) are **display-only** for exit code purposes unless paired with `--fail-on`.
 
 ## Configuration
 
-Add a **`.dbt-doctor`** props file at the project root (`KEY=value`, `#` comments — like `.env`). CLI flags override config.
+Add a **`.dbt-doctor`** props file at the project root (`KEY=value`, `#` comments - like `.env`). CLI flags override config.
 
 **Presets** (`default` | `strict` | `enterprise`) control which rule tags run and default CI strictness. Omit `preset` to run all 122 rules. See [presets](https://dbt-doctor.northgraindata.com/docs/getting-started/presets).
 
@@ -131,16 +131,16 @@ offline=false
 
 **CLI overrides:** `--preset enterprise`, `--score-mode files`, `--fail-on warning`.
 
-- **`ignore.rules`** — silence those rules everywhere.
-- **`ignore.files`** — silence **all** rules on matching paths (use sparingly).
-- **`ignore.overrides`** — silence listed rules only on matched files.
-- **`ignore.tags`** — silence every rule with a given tag (e.g. design-style hints if you use them).
-- **`rootDir`** — if config lives above the dbt project, point here (path relative to the config file).
-- **`skipSqlfluff`** / **`customRulesOnly`** — run **only** built-in dbt-doctor rules (no Python).
-- **`adoptExistingSqlfluffConfig`** — pick up `.sqlfluff` / `pyproject.toml` when present (default `true`).
-- **`offline`** — skip the remote score API and **share** link; score still uses the **local** formula.
-- **`surfaces`** — tune `cli`, `prComment`, `score`, and `ciFailure` independently (include/exclude by tag, category, or `plugin/rule` id).
-- **`rules`** / **`categories`** — severity overrides (`error` / `warn` / `off`) for rule ids and rule categories.
+- **`ignore.rules`** - silence those rules everywhere.
+- **`ignore.files`** - silence **all** rules on matching paths (use sparingly).
+- **`ignore.overrides`** - silence listed rules only on matched files.
+- **`ignore.tags`** - silence every rule with a given tag (e.g. design-style hints if you use them).
+- **`rootDir`** - if config lives above the dbt project, point here (path relative to the config file).
+- **`skipSqlfluff`** / **`customRulesOnly`** - run **only** built-in dbt-doctor rules (no Python).
+- **`adoptExistingSqlfluffConfig`** - pick up `.sqlfluff` / `pyproject.toml` when present (default `true`).
+- **`offline`** - skip the remote score API and **share** link; score still uses the **local** formula.
+- **`surfaces`** - tune `cli`, `prComment`, `score`, and `ciFailure` independently (include/exclude by tag, category, or `plugin/rule` id).
+- **`rules`** / **`categories`** - severity overrides (`error` / `warn` / `off`) for rule ids and rule categories.
 
 Rule catalog: **[Rules reference](https://dbt-doctor.northgraindata.com/docs/rules)** (generated from `packages/dbt-doctor-rules/src/rules/`).
 
@@ -194,13 +194,13 @@ Formula (same locally and on the default API):
 
 Labels: **Great** ≥ 75, **Needs work** ≥ 50, **Critical** &lt; 50.
 
-Scores can shift when new rules ship — **pin** `dbt-doctor` in CI if you need stable numbers.
+Scores can shift when new rules ship - **pin** `dbt-doctor` in CI if you need stable numbers.
 
 ## Diff and staged modes
 
-- **`--diff [base]`** — changed files vs branch (or `"diff": true` / `"diff": "develop"` in config).
-- **`--staged`** — index-only; for pre-commit hooks.
-- **`--full`** — forces a full scan.
+- **`--diff [base]`** - changed files vs branch (or `"diff": true` / `"diff": "develop"` in config).
+- **`--staged`** - index-only; for pre-commit hooks.
+- **`--full`** - forces a full scan.
 
 Interactive runs may prompt to scan only changes; CI and `--json` skip that prompt.
 
@@ -234,9 +234,9 @@ node packages/dbt-doctor/bin/dbt-doctor.js /path/to/your/dbt-project
 
 ## Who made dbt Doctor?
 
-**dbt Doctor** is built and maintained by [**Northgrain Data**](https://northgraindata.com), a data engineering agency for modern dbt and Snowflake teams. We design, build, test, and improve reliable data systems — and publish open-source tools based on what works in production.
+**dbt Doctor** is built and maintained by [**Northgrain Data**](https://northgraindata.com), a data engineering agency for modern dbt and Snowflake teams. We design, build, test, and improve reliable data systems - and publish open-source tools based on what works in production.
 
-[![Northgrain Data — the data engineering partner for modern dbt and Snowflake teams](./assets/northgrain-data-readme-banner.png)](https://northgraindata.com)
+[![Northgrain Data - the data engineering partner for modern dbt and Snowflake teams](./assets/northgrain-data-readme-banner.png)](https://northgraindata.com)
 
 ### License
 

@@ -38,7 +38,7 @@ Platform / data governance
 | ------------------------------------------------------------------------------ | ------------------- |
 | Sensible defaults while adopting dbt-doctor                                    | `preset=default`    |
 | Block merges on docs **and** native SQL formatting (`sql-keywords-case`, etc.) | `preset=strict`     |
-| Full governance program (meta, sources, DAG, SQL style — everything)           | `preset=enterprise` |
+| Full governance program (meta, sources, DAG, SQL style - everything)           | `preset=enterprise` |
 
 ## Overriding
 

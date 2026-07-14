@@ -30,7 +30,7 @@ export const validateModeFlags = (flags: InspectFlags): void => {
     throw new Error("--sarif cannot be combined with --json or --score.");
   }
   if (flags.explain !== undefined && flags.why !== undefined) {
-    throw new Error("Use --explain or --why, not both — they're aliases of the same flag.");
+    throw new Error("Use --explain or --why, not both - they're aliases of the same flag.");
   }
   const explainArgument = flags.explain ?? flags.why;
   if (

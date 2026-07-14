@@ -99,7 +99,7 @@ rules.model-name-contract.pattern=^(stg|int|fct|dim)_[a-z0-9_]+$
 
 ## Score thresholds (CI gates)
 
-Fail the job when scores drop below a minimum (requires a score to be computed — do not use `--offline` if you rely on these):
+Fail the job when scores drop below a minimum (requires a score to be computed - do not use `--offline` if you rely on these):
 
 ```ini
 fail_project_under=70

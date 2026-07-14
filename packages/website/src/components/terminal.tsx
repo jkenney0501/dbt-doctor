@@ -31,7 +31,7 @@ const SCORE_BAR_WIDTH_DESKTOP = 30;
 const TOTAL_SOURCE_FILE_COUNT = 24;
 const ELAPSED_TIME = "2.6s";
 
-/** Matches @dbt-doctor/core calculateScoreLocal — penalty per unique rule, not per finding. */
+/** Matches @dbt-doctor/core calculateScoreLocal - penalty per unique rule, not per finding. */
 const ERROR_RULE_PENALTY = 1.5;
 const WARNING_RULE_PENALTY = 0.75;
 
@@ -68,7 +68,7 @@ interface RuleDiagnostic {
   location: string;
 }
 
-/** Top rule groups shown in the animation — worst architectural smells first. */
+/** Top rule groups shown in the animation - worst architectural smells first. */
 const VISIBLE_DIAGNOSTICS: RuleDiagnostic[] = [
   {
     ruleKey: "dbt-doctor/source-in-downstream",
@@ -136,7 +136,7 @@ const VISIBLE_DIAGNOSTICS: RuleDiagnostic[] = [
   },
 ];
 
-/** Remaining native rules (collapsed in CLI) — needed for an honest Critical score. */
+/** Remaining native rules (collapsed in CLI) - needed for an honest Critical score. */
 const buildAllScoreDiagnostics = (): RuleDiagnostic[] => {
   const hiddenGovernance: RuleDiagnostic[] = HIDDEN_GOVERNANCE_RULE_IDS.map((ruleId) => ({
     ruleKey: `dbt-doctor/${ruleId}`,
@@ -518,7 +518,7 @@ const Terminal = () => {
               </a>
               ; this project clones and adapts its ideas (CLI, scoring, agent tooling) for{" "}
               <strong className="text-neutral-500">dbt</strong> and remains{" "}
-              <strong className="text-neutral-500">MIT</strong> as well — see the monorepo{" "}
+              <strong className="text-neutral-500">MIT</strong> as well - see the monorepo{" "}
               <a
                 href="https://github.com/northgraindata/dbt-doctor/blob/main/LICENSE"
                 target="_blank"

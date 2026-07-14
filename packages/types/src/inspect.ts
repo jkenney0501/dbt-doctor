@@ -28,7 +28,7 @@ export interface InspectResult {
   /**
    * Human-readable explanation for each entry in `skippedChecks`. Keyed
    * by check name (e.g. `"lint"`). Optional so existing consumers that
-   * only read `skippedChecks` keep working unchanged — but JSON output
+   * only read `skippedChecks` keep working unchanged - but JSON output
    * and CI integrations should prefer this for diagnostic clarity
    * (e.g. distinguishing "oxlint native binding missing" from "oxlint
    * spawn timed out on a large project").
@@ -57,7 +57,7 @@ export interface InspectOptions {
    * Surface that consumes the printed diagnostic output (terminal
    * summary + per-rule list). Defaults to `"cli"`, which shows every
    * diagnostic. Set to `"prComment"` when capturing output destined
-   * for a PR comment — weak-signal rule families (default: `design`
+   * for a PR comment - weak-signal rule families (default: `design`
    * tag) are dropped from the printed list and replaced with a
    * one-line "N more demoted" hint so they don't bury real React
    * findings. The returned `InspectResult.diagnostics` always
@@ -84,7 +84,7 @@ export type JsonReportMode = "full" | "diff" | "staged";
 
 export interface JsonReportDiffInfo {
   baseBranch: string;
-  /** `null` when `HEAD` is detached — see `DiffInfo.currentBranch`. */
+  /** `null` when `HEAD` is detached - see `DiffInfo.currentBranch`. */
   currentBranch: string | null;
   changedFileCount: number;
   isCurrentChanges: boolean;

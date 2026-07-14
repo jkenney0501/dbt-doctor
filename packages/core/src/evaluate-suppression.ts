@@ -38,7 +38,7 @@ const findOutOfChainMatch = (
 const buildAdjacentMismatchHint = (comment: StackedDisableComment, ruleId: string): string => {
   const ruleListText = comment.ruleList?.trim() ?? "";
   return (
-    `An adjacent dbt-doctor-disable-next-line at line ${comment.commentLineIndex + 1} lists "${ruleListText}" — ${ruleId} is not in that list. ` +
+    `An adjacent dbt-doctor-disable-next-line at line ${comment.commentLineIndex + 1} lists "${ruleListText}" - ${ruleId} is not in that list. ` +
     `Use the comma form: dbt-doctor-disable-next-line ${ruleListText}, ${ruleId}`
   );
 };

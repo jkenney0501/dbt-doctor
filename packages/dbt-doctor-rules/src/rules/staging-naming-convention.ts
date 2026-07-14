@@ -23,7 +23,7 @@ export const stagingNamingConvention: Rule = {
           stagingNamingConvention,
           file,
           `Staging model "${basename}" should follow stg_<source>__<entity>`,
-          "Example: stg_stripe__payments.sql — see dbt Labs naming guide.",
+          "Example: stg_stripe__payments.sql - see dbt Labs naming guide.",
         ),
       );
     }

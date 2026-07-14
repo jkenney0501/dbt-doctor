@@ -22,13 +22,13 @@ interface DbtDoctorIgnoreConfig {
  * Each surface is filtered independently so a rule can be visible
  * locally but excluded from PR comments, the score, or the CI gate:
  *
- * - `cli` — local terminal output from `dbt-doctor` (`printDiagnostics`).
- * - `prComment` — output captured by the GitHub Action for the sticky
+ * - `cli` - local terminal output from `dbt-doctor` (`printDiagnostics`).
+ * - `prComment` - output captured by the GitHub Action for the sticky
  *   PR comment. Enabled when the CLI is run with `--pr-comment` (the
  *   action sets this automatically when `github-token` is provided).
- * - `score` — diagnostics shipped to the React Doctor score API
+ * - `score` - diagnostics shipped to the React Doctor score API
  *   (or counted toward local score calculations).
- * - `ciFailure` — diagnostics that count toward the `--fail-on` exit
+ * - `ciFailure` - diagnostics that count toward the `--fail-on` exit
  *   code gate. A diagnostic excluded from this surface never fails the
  *   build, regardless of severity.
  *
@@ -47,7 +47,7 @@ export type DiagnosticSurface = "cli" | "prComment" | "score" | "ciFailure";
  * registered severity.
  *
  * For visibility-only adjustments (silence on PR comments but keep
- * on CLI / score), prefer `surfaces` instead — severity applies
+ * on CLI / score), prefer `surfaces` instead - severity applies
  * before lint runs and is the most aggressive control.
  */
 export type RuleSeverityOverride = "error" | "warn" | "off";
@@ -130,7 +130,7 @@ export interface DbtDoctorConfig {
    * `ButtonLabel` → `Text`). For listed components, `rn-no-raw-text`
    * is suppressed ONLY when the wrapper's children are entirely
    * stringifiable (no nested JSX elements). A wrapper with mixed
-   * children — e.g. `<Button>Save<Icon /></Button>` — still reports,
+   * children - e.g. `<Button>Save<Icon /></Button>` - still reports,
    * because the wrapper can't safely route raw text alongside a
    * sibling JSX element.
    *
@@ -150,7 +150,7 @@ export interface DbtDoctorConfig {
    * subject to receiver-object disambiguation.
    *
    * Use this to teach dbt-doctor about custom auth guards in
-   * codebases that wrap their auth library — e.g. a project-local
+   * codebases that wrap their auth library - e.g. a project-local
    * `requireWorkspaceMember` or `ensureSignedIn`.
    */
   serverAuthFunctionNames?: string[];
@@ -161,7 +161,7 @@ export interface DbtDoctorConfig {
    * File-level ignores (`.gitignore`, `.eslintignore`, `.oxlintignore`,
    * `.prettierignore`, `.gitattributes` `linguist-vendored` /
    * `linguist-generated`) are ALWAYS honored regardless of this option
-   * — they typically point at vendored or generated code that
+   * - they typically point at vendored or generated code that
    * genuinely shouldn't be linted at all.
    *
    * Set to `false` for "audit mode": every inline suppression is
@@ -186,7 +186,7 @@ export interface DbtDoctorConfig {
    * (`oxlint.config.ts`) are silently skipped.
    *
    * Category-level enables in the user's config (`"categories": { ... }`)
-   * are NOT honored — dbt-doctor explicitly disables every oxlint
+   * are NOT honored - dbt-doctor explicitly disables every oxlint
    * category to keep the scan scoped to its curated rule surface, and
    * local config wins over `extends`. Use rule-level severities to
    * fold rules into the score.
@@ -206,7 +206,7 @@ export interface DbtDoctorConfig {
    * Per-surface include/exclude controls. Each `DiagnosticSurface` is
    * resolved independently against rule tags, category, and id so a
    * single rule can be visible locally yet hidden from PR comments,
-   * neutralized from the score, and excluded from `--fail-on` — all
+   * neutralized from the score, and excluded from `--fail-on` - all
    * without touching the rule's severity or activation.
    *
    * Defaults (applied before user overrides):
@@ -217,13 +217,13 @@ export interface DbtDoctorConfig {
    *
    * Pass any controls block (even an empty `{}`) to keep the default
    * exclusions; the user's include/exclude entries layer on top.
-   * Include entries always win over exclude entries — handy for
+   * Include entries always win over exclude entries - handy for
    * promoting a single high-signal `design-*` rule back into the
    * score or PR-comment surface.
    */
   surfaces?: Partial<Record<DiagnosticSurface, SurfaceControls>>;
   /**
-   * Per-rule severity map — the exact ESLint / oxlint top-level
+   * Per-rule severity map - the exact ESLint / oxlint top-level
    * `rules` field. Keys are fully-qualified rule keys
    * (`"<plugin>/<rule>"`, e.g. `"dbt-doctor/no-array-index-as-key"`),
    * values are `"error" | "warn" | "off"`.

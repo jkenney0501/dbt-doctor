@@ -13,7 +13,7 @@
 
 - `strict` tagged rules (docs contracts, dbt-checkpoint parity, Jinja padding, etc.)
 - `enterprise` tagged rules (governance meta, catalog column checks, etc.)
-- SQL style tags (`style`, `sql-style`) — native SQLFluff-parity formatting
+- SQL style tags (`style`, `sql-style`) - native SQLFluff-parity formatting
 
 Only **untagged** core rules run on `default` (architecture, naming, `no-select-star`, and similar).
 
